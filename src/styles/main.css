@@ -1,0 +1,62 @@
+body {
+    margin: 0; padding: 0;
+    background-color: #F7F5FF;
+}
+
+header {
+    width: 100%;
+}
+
+header h1 {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black, 0 0 1em blue, 0 0 0.2em blue;
+    color: white;
+}
+
+.tasks-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.tasks-container ul {
+    padding: 0;
+    list-style: none;
+}
+
+.tasks-container ul li {
+    margin-bottom: 5px;
+    border: 1px solid blue;
+    background-color: #F5FFFF;
+    padding: 5px;
+}
+
+.tasks-container ul li.completed {
+    background-color: #A5D6A7;
+}
+
+.buttons {
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.tasks-creation-container  {
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+
+
+.tasks-creation-container input {
+    width: 449px;
+    height: 20px;
+}
+
+input.filter {
+    width: 100%;
+}
+

@@ -1,0 +1,33 @@
+<div>
+    <header><h1>TODO</h1></header>
+
+    <div class="btn-group-xs buttons">
+        <button class="btn" ng-click="vm.clearTask()">Clear</button>
+        <button class="btn" ng-click="vm.saveTasks()">Save</button>
+        <button class="btn" ng-click="vm.loadTasks()">Load</button>
+    </div>
+    <form ng-submit="vm.addTask()" class="tasks-creation-container">
+        <input type="text" ng-model="vm.newTask.content" placeholder="Task content here...">
+        <button  ng-click="vm.addTask()" ng-disabled="!vm.newTask.content">Add</button>
+
+    </form>
+    <div class="tasks-container">
+        <input class="filter" type="search" ng-model="vm.filterTask" placeholder="Filter...">
+        <ul >
+            <li ng-repeat="task in vm.tasks | filter: {content: vm.filterTask} track by task.id"
+
+                ng-class="{'completed': task.completed}">
+                <label>
+                    <input type="checkbox" ng-model="task.completed">
+                    {{task.content}}
+                    <br>
+                    <small>Created on {{task.createdDate | date}}</small>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+
+    <div ng-view></div>
+
+</div>
